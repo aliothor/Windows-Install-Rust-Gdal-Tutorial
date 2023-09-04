@@ -12,6 +12,7 @@ English | [简体中文](./README_zh_CN.md)
 
 ### 2、Set environment variables, note the GDAL version.
 
+```shell
 // windows path system environment variable
 Path:C:\xxxxxx\gdal_lib\release-1930-x64-gdal-mapserver\\bin
 Path:C:\xxxxxx\gdal_lib\release-1930-x64-gdal-mapserver\\bin\\gdal\\apps
@@ -21,6 +22,7 @@ GDAL_HOME=C:\xxxxxx\gdal_lib\release-1930-x64-gdal-mapserver
 PKG_CONFIG_PATH=C:\xxxxxx\gdal_lib\release-1930-x64-gdal-mapserver
 PROJ_LIB=C:\xxxxxx\gdal_lib\release-1930-x64-gdal-3-7-1-mapserver-8-0-1\bin\proj9\share
 GDAL_VERSION=371
+```
 
 ### 3、Install choco and pkgconfiglite (windows pkg-config).
 
@@ -68,4 +70,4 @@ cargo run --example metadata
 ```
 
 #### RoadMap
-Submit the code to the rust gdal official repository.
+1、Submit the code to the rust gdal official repository github action.

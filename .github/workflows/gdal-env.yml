@@ -1,4 +1,4 @@
-name: SET GDAL ENV
+name: Rust GDAL IN Windows
 
 on:
     push:
@@ -10,11 +10,10 @@ jobs:
     name: GDAL ENV
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install build deps and run test
         shell: pwsh
         run: |
           ./scripts/env.ps1
-          rustup install stable
-          rustup component add rustfmt clippy
+          ls
           cargo run --example metadata 

@@ -1,12 +1,12 @@
-## Windows安装Rust版本Gdal步骤 [github repository](https://github.com/aliothor/Windows-Install-Rust-Gdal-Tutorial)
+# Windows安装Rust版本GDAL步骤 [github repository](https://github.com/aliothor/Windows-Install-Rust-Gdal-Tutorial)
 
 ### 1、下载gdal c++编译后源码，将解压后的的文件放在同一个文件夹内
 
 > https://www.gisinternals.com/release.php
 
-![step 1](image.png)
-![step 2](image-1.png)
-![dir file](image-2.png)
+![step 1](./imgs/image.png)
+![step 2](./imgs/image-1.png)
+![dir file](./imgs/image-2.png)
 
 
 ### 2、设置环境变量,注意gdal版本

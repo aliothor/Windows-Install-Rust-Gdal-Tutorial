@@ -1,4 +1,4 @@
-## Windows Install Rust Version Gdal Steps [github repository](https://github.com/aliothor/Windows-Install-Rust-Gdal-Tutorial)
+# Windows Install Rust GDAL Tutorial [github repository](https://github.com/aliothor/Windows-Install-Rust-Gdal-Tutorial)
 
 English | [简体中文](./README_zh_CN.md)
 
@@ -6,9 +6,9 @@ English | [简体中文](./README_zh_CN.md)
 
 > https://www.gisinternals.com/release.php
 
-![step 1](image.png)
-![step 2](image-1.png)
-![dir file](image-2.png)
+![step 1](./imgs/image.png)
+![step 2](./imgs/image-1.png)
+![dir file](./imgs/image-2.png)
 
 ### 2、Set environment variables, note the GDAL version.
 
@@ -45,7 +45,7 @@ gdal.pc file path C:\xxxxxx\gdal_lib\release-1930-x64-gdal-mapserver\gdal.pc
 
 gdal.pc file content
 
-```text>
+```text
 name=gdal
 prefix=/usr
 exec_prefix=${prefix}

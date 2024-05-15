@@ -29,6 +29,9 @@ $env:PKG_CONFIG_PATH=$gdal_home
 $env:PROJ_LIB=$proj_lib
 $env:GDAL_VERSION=373
 
+Get-ChildItem $gdal_home
+Write-Output $gdal_pc_path
+
 $gdal_content = @'
 name=gdal
 prefix=/usr

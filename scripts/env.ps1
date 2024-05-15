@@ -1,7 +1,9 @@
 # 1、download gdal and libs
 
-curl -o  gdal.zip "http://127.0.0.1:8080/release-1930-x64-gdal-3-7-3-mapserver-8-0-1.zip"
-curl -o  gdal-libs.zip "http://127.0.0.1:8080/release-1930-x64-gdal-3-7-3-mapserver-8-0-1-libs.zip"
+# curl -o  gdal.zip "http://127.0.0.1:8080/release-1930-x64-gdal-3-7-3-mapserver-8-0-1.zip"
+# curl -o  gdal-libs.zip "http://127.0.0.1:8080/release-1930-x64-gdal-3-7-3-mapserver-8-0-1-libs.zip"
+curl -o  gdal.zip "https://build2.gisinternals.com/sdk/downloads/release-1930-x64-gdal-3-7-3-mapserver-8-0-1.zip"
+curl -o  gdal-libs.zip "https://build2.gisinternals.com/sdk/downloads/release-1930-x64-gdal-3-7-3-mapserver-8-0-1-libs.zip"
 
 # 2、unzip gdal.zip gdll-libs.zip
 

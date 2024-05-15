@@ -1,8 +1,8 @@
 name: Rust GDAL IN Windows
 
 on:
-    push:
-      branches: [main]
+  push:
+     branches: [main]
 
 jobs:
   env:
@@ -11,9 +11,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Setup Rust
+        uses: moonrepo/setup-rust@v1
       - name: Install build deps and run test
         shell: pwsh
         run: |
           ./scripts/env.ps1
           ls
-          cargo run --example spatial_reference 
+          cargo run --example spatial_reference

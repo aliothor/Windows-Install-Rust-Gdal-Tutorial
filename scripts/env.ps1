@@ -11,7 +11,7 @@ $gdal_pc_path=Join-Path -Path $PSScriptRoot -ChildPath "gdal\gdal.pc"
 # $env:PROJ_LIB=$proj_lib
 # $env:GDAL_VERSION=373
 
-$User = [System.EnvironmentVariableTarget]::Machine
+$User = [System.EnvironmentVariableTarget]::User
 $Path = [System.Environment]::GetEnvironmentVariable('Path', $User)
 [System.Environment]::SetEnvironmentVariable('Path', "${Path};${gdal_bin}", $User)
 $Path2 = [System.Environment]::GetEnvironmentVariable('Path', $User)

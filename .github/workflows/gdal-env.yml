@@ -16,4 +16,4 @@ jobs:
         run: |
           ./scripts/env.ps1
           ls
-          cargo run --example metadata 
+          cargo run --example spatial_reference 

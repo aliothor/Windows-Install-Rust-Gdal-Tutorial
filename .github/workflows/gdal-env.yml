@@ -16,6 +16,6 @@ jobs:
       - name: Install build deps and run test
         shell: pwsh
         run: |
-          ./scripts/env.ps1
           ls
-          cargo run --example spatial_reference
+          ./scripts/env.ps1
+          cargo run

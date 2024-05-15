@@ -1,6 +1,6 @@
+$gdal_home=Join-Path -Path $PSScriptRoot -ChildPath "gdal"
 $gdal_bin=Join-Path -Path $PSScriptRoot -ChildPath "gdal\bin"
 $gdal_apps=Join-Path -Path $PSScriptRoot -ChildPath "gdal\bin\gdal\apps"
-$gdal_home=Join-Path -Path $PSScriptRoot -ChildPath "gdal"
 $proj_lib=Join-Path -Path $PSScriptRoot -ChildPath "gdal\bin\proj9\share"
 $gdal_pc_path=Join-Path -Path $PSScriptRoot -ChildPath "gdal\gdal.pc"
 
@@ -49,3 +49,5 @@ Cflags: -I${includedir}/${name}
 
 # 5、write gdal.pc
 Set-Content -Path $gdal_pc_path -Value $gdal_content
+
+Get-Content $gdal_pc_path

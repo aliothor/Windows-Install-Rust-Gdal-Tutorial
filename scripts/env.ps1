@@ -1,21 +1,3 @@
-# 1、download gdal and libs
-
-# curl -o  gdal.zip "http://127.0.0.1:8080/release-1930-x64-gdal-3-7-3-mapserver-8-0-1.zip"
-# curl -o  gdal-libs.zip "http://127.0.0.1:8080/release-1930-x64-gdal-3-7-3-mapserver-8-0-1-libs.zip"
-curl -o  gdal.zip "https://build2.gisinternals.com/sdk/downloads/release-1930-x64-gdal-3-7-3-mapserver-8-0-1.zip"
-curl -o  gdal-libs.zip "https://build2.gisinternals.com/sdk/downloads/release-1930-x64-gdal-3-7-3-mapserver-8-0-1-libs.zip"
-
-# 2、unzip gdal.zip gdll-libs.zip
-
-7z x gdal.zip -ogdal
-7z x gdal-libs.zip -ogdal
-
-# 3、install pkgconfiglite
-
-choco install pkgconfiglite -y
-
-# 4、set env variable
-
 $gdal_bin=Join-Path -Path $PSScriptRoot -ChildPath "gdal\bin"
 $gdal_apps=Join-Path -Path $PSScriptRoot -ChildPath "gdal\bin\gdal\apps"
 $gdal_home=Join-Path -Path $PSScriptRoot -ChildPath "gdal"
@@ -28,6 +10,24 @@ $env:GDAL_HOME=$gdal_home
 $env:PKG_CONFIG_PATH=$gdal_home
 $env:PROJ_LIB=$proj_lib
 $env:GDAL_VERSION=373
+
+# 1、download gdal and libs
+
+# curl -o  gdal.zip "http://127.0.0.1:8080/release-1930-x64-gdal-3-7-3-mapserver-8-0-1.zip"
+# curl -o  gdal-libs.zip "http://127.0.0.1:8080/release-1930-x64-gdal-3-7-3-mapserver-8-0-1-libs.zip"
+curl -o  gdal.zip "https://build2.gisinternals.com/sdk/downloads/release-1930-x64-gdal-3-7-3-mapserver-8-0-1.zip"
+curl -o  gdal-libs.zip "https://build2.gisinternals.com/sdk/downloads/release-1930-x64-gdal-3-7-3-mapserver-8-0-1-libs.zip"
+
+# 2、unzip gdal.zip gdll-libs.zip
+
+7z x gdal.zip -o"${gdal_home}"
+7z x gdal-libs.zip -o"${gdal_home}"
+
+# 3、install pkgconfiglite
+
+choco install pkgconfiglite -y
+
+# 4、set env variable
 
 Get-ChildItem $gdal_home
 Write-Output $gdal_pc_path

@@ -11,13 +11,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Install build deps
+      - name: Install build deps and run test
         shell: pwsh
         run: |
           ./scripts/env.ps1
-      - name: Install stable
-        run: |
-            rustup install stable
-            rustup component add rustfmt clippy
-      - name: Run Test
-        run: cargo run --example metadata 
+          rustup install stable
+          rustup component add rustfmt clippy
+          cargo run --example metadata 
